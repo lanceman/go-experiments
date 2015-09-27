@@ -1,9 +1,0 @@
-package main
-
-import (
-	"fmt"
-	"github.com/lanceman/go-experiments/fib"
-
-func main() {
-	fmt.Println("%d",fib.NextFib(848489448))
-}
