@@ -16,7 +16,8 @@ func main() {
 				fmt.Println(err)
 				os.Exit(0)
 			}
-			fmt.Printf("Entered [%d], NextFib returned %d\n",converted, fib.NextFib(converted))
+			a,b := fib.NextFib(converted)
+			fmt.Printf("Entered [%d], NextFib returned [%d]: sequence[%d]\n",converted,a,b)
 		}
 	} else {
 		fmt.Println("No arguments provided!")

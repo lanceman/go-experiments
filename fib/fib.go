@@ -1,17 +1,15 @@
 package fib
 
-func Add(a, b uint64) uint64 {
-	return a + b
-}
-
-func NextFib(start uint64) uint64 {
-	var fib, prev uint64 = 1, 0
+func NextFib(start uint64) (fNum, sNum uint64) {
+	var prev uint64 = 0
+	fNum, sNum = 1,1
 	for i := prev; ; {
-		if fib > start {
-			return fib
+		if fNum > start {
+			return fNum, sNum
 		}
-		prev = fib
-		fib = prev + i
+		prev = fNum
+		fNum = prev + i
 		i = prev
+		sNum++ 
 	}
 }
